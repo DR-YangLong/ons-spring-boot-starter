@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.github.yanglong.ons.http.producer.HttpProducerAutoConfiguration,\
+io.github.yanglong.ons.http.consumer.HttpConsumerAutoConfiguration

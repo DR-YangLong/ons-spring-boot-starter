@@ -1,0 +1,113 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: ons-tcp-test
+nameServer: ${ONS_NAME_SERVER}
+ali-ons:
+  enable: true
+  default-access:
+    accessKey: ${ONS_AK}
+    secretKey: ${ONS_SK}
+  tcp:
+    producer:
+      enable: true
+      producers:
+        normal:
+          instanceName: ${spring.application.name}
+          timeout: 3000
+          #消息类型，不同的消息类型生成不同的生产者
+          msgType: NORMAL
+          #TCP接入点
+          nameServer: ${nameServer}
+        order:
+          instanceName: ${spring.application.name}
+          timeout: 2000
+          #消息类型，不同的消息类型生成不同的生产者
+          msgType: ORDER
+          #TCP接入点
+          nameServer: ${nameServer}
+          #group Id
+          group: GID_TCP_ORDER_DEV
+        trans:
+          instanceName: ${spring.application.name}
+          timeout: 6000
+          #消息类型，不同的消息类型生成不同的生产者
+          msgType: TRANSACTION
+          #TCP接入点
+          nameServer: ${nameServer}
+          #group Id
+          group: GID_TCP_TRANS_DEV
+          transChecker: io.github.yanglong.ons.tcp.sample.TransactionCheckerImpl
+    consumer:
+      enable: true
+      #消费者配置，同一个接入点的订阅，按NORMAL（包括了普通，事务，延时，定时，批量）和ORDER分别全部配置到一起，方便管理
+      consumers:
+        #TCP普通消费者，包括事务，定时，延时
+        normal:
+          #消息类型，消费端忽略
+          msgType: NORMAL
+          #消费者group
+          group: GID_TCP_NORMAL_DEV
+          #TCP
+          nameServer: ${nameServer}
+          #可选，同一个接入点的最好配置且同一个
+          instanceName: ${spring.application.name}
+          #消费线程数，使用默认4
+          threadNums: "4"
+          #订阅关系列表
+          subscriptions:
+            - topic: normal_dev
+              tags: a
+              #tcp模式下消息处理类
+              listener: io.github.yanglong.ons.tcp.sample.TcpNormalListener
+            - topic: time_dev
+              #tcp模式下消息处理类
+              listener: io.github.yanglong.ons.tcp.sample.TcpNormalListener
+            - topic: trans_dev
+              #tcp模式下消息处理类
+              listener: io.github.yanglong.ons.tcp.sample.TcpNormalListener
+        #TCP顺序消费者
+        order:
+          #消息类型，消费端忽略
+          msgType: ORDER
+          group: GID_TCP_ORDER_DEV
+          #TCP接入点
+          nameServer: ${nameServer}
+          instanceName: ${spring.application.name}
+          #消费线程数，使用默认4
+          threadNums: "4"
+          #订阅关系列表
+          subscriptions:
+            #分区顺序消息
+            - topic: order_sharding_dev
+              tags: s
+              #tcp模式下消息处理类
+              listener: io.github.yanglong.ons.tcp.sample.TcpOrderListener
+            #全局顺序消息
+            - topic: order_global_dev
+              #tcp模式下消息处理类
+              listener: io.github.yanglong.ons.tcp.sample.TcpOrderListener
+        #TCP批量消费者
+        batch:
+          #消息类型，消费端忽略
+          msgType: NORMAL
+          #设置为批量
+          batchEnable: true
+          group: GID_TCP_BATCH_DEV
+          #TCP接入点
+          nameServer: ${nameServer}
+          instanceId:
+          instanceName: ${spring.application.name}
+          #仅当批量消费生效
+          batchConsumeMaxAwaitDurationInSeconds: 5
+          #仅当批量消费生效
+          consumeMessageBatchMaxSize: 3
+          #消费线程数，使用默认4
+          threadNums: "4"
+          #订阅关系列表
+          subscriptions:
+            - topic: normal_dev
+              tags: batch
+              #tcp模式下消息处理类
+              listener: io.github.yanglong.ons.tcp.sample.TcpBatchListener

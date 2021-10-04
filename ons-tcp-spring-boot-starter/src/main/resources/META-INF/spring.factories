@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+io.github.yanglong.ons.tcp.producer.TcpProducerAutoConfiguration,\
+io.github.yanglong.ons.tcp.consumer.TcpConsumerAutoConfiguration

@@ -1,0 +1,81 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: ons-http-test
+nameServer: ${ONS_NAME_SERVER}
+ali-ons:
+  enable: true
+  default-access:
+    accessKey: ${ONS_AK}
+    secretKey: ${ONS_SK}
+  http:
+    producer:
+      enable: true
+      producers:
+        normal:
+          access:
+            accessKey: ${ONS_AK}
+            secretKey: ${ONS_SK}
+          instanceName: ${spring.application.name}
+          timeout: 6000
+          #消息类型，不同的消息类型生成不同的生产者
+          msgType: NORMAL
+          #接入点
+          nameServer: ${nameServer}
+        trans:
+          instanceName: ${spring.application.name}
+          timeout: 6000
+          #消息类型，不同的消息类型生成不同的生产者
+          msgType: TRANSACTION
+          #接入点
+          nameServer: ${nameServer}
+          #group Id
+          group: GID_HTTP_TRANS_DEV
+          httpTransChecker: io.github.yanglong.ons.http.sample.HalfMsgStatusCheckerImpl
+    consumer:
+      enable: true
+      #消费者配置，同一个接入点的订阅，按NORMAL（包括了普通，事务，延时，定时，批量）和ORDER分别全部配置到一起，方便管理
+      consumers:
+        #普通消费者，包括事务，定时，延时
+        normal:
+          #消息类型，消费端忽略
+          msgType: NORMAL
+          #消费者group
+          group: GID_HTTP_NORMAL_DEV
+          #TCP
+          nameServer: ${nameServer}
+          #可选，同一个接入点的最好配置且同一个
+          instanceName: ${spring.application.name}
+          #消费线程数，使用默认4
+          threadNums: "4"
+          #订阅关系列表
+          subscriptions:
+            - topic: normal_dev
+              #OnsMessageListener实现类名
+              listener: io.github.yanglong.ons.http.sample.HttpConsumeListener
+            - topic: trans_dev
+              #OnsMessageListener实现类名
+              listener: io.github.yanglong.ons.http.sample.HttpConsumeListener
+            - topic: time_dev
+              tags: a
+              #OnsMessageListener实现类名
+              listener: io.github.yanglong.ons.http.sample.HttpConsumeListener
+        #顺序消费者
+        order:
+          #消息类型，消费端忽略
+          msgType: ORDER
+          group: GID_HTTP_ORDER_DEV
+          #接入点
+          nameServer: ${nameServer}
+          instanceName: ${spring.application.name}
+          #消费线程数，使用默认4
+          threadNums: "4"
+          #订阅关系列表
+          subscriptions:
+            - topic: order_sharding_dev
+              #OnsMessageListener实现类名
+              listener: io.github.yanglong.ons.http.sample.HttpConsumeListener
+            - topic: order_global_dev
+              #OnsMessageListener实现类名
+              listener: io.github.yanglong.ons.http.sample.HttpConsumeListener
