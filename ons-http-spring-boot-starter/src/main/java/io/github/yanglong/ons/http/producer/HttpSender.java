@@ -44,6 +44,8 @@ public class HttpSender {
     }
 
     /**
+     * 同步发送普通消息
+     *
      * @param producerName 消息生产者名字，在配置文件中配置
      * @param topic        topic
      * @param tag          标签
@@ -59,6 +61,8 @@ public class HttpSender {
     }
 
     /**
+     * 异步发送普通消息
+     *
      * @param producerName 消息生产者名字，在配置文件中配置
      * @param topic        topic
      * @param tag          标签
@@ -74,6 +78,8 @@ public class HttpSender {
     }
 
     /**
+     * 发送顺序消息
+     *
      * @param producerName 消息生产者名字，在配置文件中配置
      * @param topic        topic
      * @param tag          标签
@@ -90,6 +96,8 @@ public class HttpSender {
     }
 
     /**
+     * 发送事务消息
+     *
      * @param producerName 消息生产者名字，在配置文件中配置
      * @param topic        topic
      * @param tag          标签
@@ -132,6 +140,8 @@ public class HttpSender {
     }
 
     /**
+     * 发送延迟消息
+     *
      * @param producerName 消息生产者名字，在配置文件中配置
      * @param topic        topic
      * @param tag          标签
@@ -139,7 +149,6 @@ public class HttpSender {
      * @param msg          消息
      * @param delayTime    延迟毫秒数
      * @return msgId，失败返回NULL
-     * @
      */
     public String sendDelayMsg(@NotEmpty final String producerName, @NotEmpty final String topic, final String tag, @NotEmpty final String key, @NotEmpty final String msg, final long delayTime) {
         log.info("send HTTP mq delay message,producer name is {},message is[topic:{},tag:{},key:{},msg:{},delayTime:{}]", producerName, topic, tag, key, msg, delayTime);
@@ -148,6 +157,8 @@ public class HttpSender {
     }
 
     /**
+     * 发送定时消息
+     *
      * @param producerName 消息生产者名字，在配置文件中配置
      * @param topic        topic
      * @param tag          标签

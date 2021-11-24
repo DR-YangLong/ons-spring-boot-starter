@@ -23,7 +23,9 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Description: ons消费者，订阅topic，使用listener进行处理，注意同时订阅多个topic时需要在listener中分开处理
+ * Description: ONS HTTP消费者工厂实现
+ *
+ * ons消费者，订阅topic，使用listener进行处理，注意同时订阅多个topic时需要在listener中分开处理
  * 完成配置生成客户端与从配置文件生成消费者并配置，未完成消费者刷新配置，重新生成。
  *
  * @author YangLong [410357434@163.com]

@@ -36,6 +36,11 @@ public class HttpConsumerAutoConfiguration {
     @Autowired
     private TaskExecutor taskExecutor;
 
+    /**
+     * 生成ONS HTTP消费者工厂
+     *
+     * @return HttpConsumerFactory
+     */
     @Bean(initMethod = "init", destroyMethod = "shutdown")
     public HttpConsumerFactory onsHttpConsumerFactory() {
         log.debug("config HttpConsumerFactory.");

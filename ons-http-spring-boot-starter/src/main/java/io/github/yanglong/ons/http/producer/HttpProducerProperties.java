@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * Description: HTTP发送者属性配置
+ * Description: HTTP发送客户端属性配置
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0

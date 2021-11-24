@@ -5,7 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 
 /**
- * Description:
+ * Description: ONS基础配置
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0

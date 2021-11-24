@@ -34,6 +34,11 @@ public class TcpConsumerAutoConfiguration {
     @Autowired
     private OnsContextAware onsContextAware;
 
+    /**
+     * 生成TCP消费者工厂
+     *
+     * @return TcpConsumerFactory
+     */
     @Bean(initMethod = "init", destroyMethod = "shutdown")
     public TcpConsumerFactory onsTcpConsumerFactory() {
         log.debug("config TcpConsumerFactory.");

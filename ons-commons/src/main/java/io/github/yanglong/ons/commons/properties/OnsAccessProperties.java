@@ -3,7 +3,7 @@ package io.github.yanglong.ons.commons.properties;
 import lombok.Data;
 
 /**
- * Description:
+ * Description: AK和SK配置
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0

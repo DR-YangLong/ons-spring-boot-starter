@@ -4,7 +4,7 @@ import com.aliyun.openservices.ons.api.batch.BatchMessageListener;
 import io.github.yanglong.ons.commons.listener.OnsMessageListener;
 
 /**
- * Description:ons批量消息处理监听器
+ * Description: ons批量消息处理监听器
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0

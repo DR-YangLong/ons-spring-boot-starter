@@ -14,7 +14,9 @@ import javax.validation.constraints.NotEmpty;
 import java.nio.charset.StandardCharsets;
 
 /**
- * Description: 消息发送者封装，使用OnsTcpProducerFactory中的容器获取对应名称的producer实例，进行消息发送。
+ * Description: TC消息发送客户端封装
+ *
+ * 使用OnsTcpProducerFactory中的容器获取对应名称的producer实例，进行消息发送。
  * 没有对异步发送进行延时和定时消息封装。
  *
  * @author YangLong [410357434@163.com]

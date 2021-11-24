@@ -4,7 +4,7 @@ import io.github.yanglong.ons.commons.listener.OnsMessageListener;
 import lombok.Data;
 
 /**
- * Description: ons订阅关系配置
+ * Description: ons订阅关系配置属性
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0

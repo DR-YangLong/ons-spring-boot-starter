@@ -17,7 +17,8 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Description: HTTP方式客户端生成.
+ * Description: HTTP方式生产客户端生成
+ *
  * 生成通用的MQClient和放入缓存，当发送消息时，用topic,group获取发送客户端，进行发送，同时缓存此客户端。
  *
  * @author YangLong [410357434@163.com]

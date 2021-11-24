@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.NestedConfigurationProperty;
 import java.util.Map;
 
 /**
- * Description:
+ * Description: TCP消费者配置
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0

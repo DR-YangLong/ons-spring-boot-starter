@@ -11,7 +11,7 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * Description: HTTP消费者线程
+ * Description: HTTP消息消费者线程
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0

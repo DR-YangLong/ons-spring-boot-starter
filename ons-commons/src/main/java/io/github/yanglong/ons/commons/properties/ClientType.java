@@ -1,7 +1,7 @@
 package io.github.yanglong.ons.commons.properties;
 
 /**
- * Description:
+ * Description: ONS客户端类型
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0

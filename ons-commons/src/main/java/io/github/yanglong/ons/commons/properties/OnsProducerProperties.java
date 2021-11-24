@@ -4,7 +4,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * Description: ons生产者配置
+ * Description: ons生产者配置属性
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0

@@ -26,7 +26,9 @@ import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Description:消费者实例则在此处进行启动消费，HTTP消费端线程使用TaskExecutor来执行。因此必须配置名称为taskExecutor的TaskExecutor！
+ * Description:消费者实例则在此处进行启动消费
+ *
+ * HTTP消费端线程使用TaskExecutor来执行。因此必须配置名称为taskExecutor的TaskExecutor！
  * 使用配置文件进行消息订阅的方式，同一个实例同一种消息类型的订阅合并，因此无法对单个订阅关系进行维护，实际可以通过instanceName进行底层共享连接。
  *
  * @author YangLong [410357434@163.com]
@@ -241,7 +243,7 @@ public class TcpConsumerFactory implements OnsFactory {
     /**
      * 关闭特定名称的consumer
      *
-     * @param name 名称
+     * @param name 消费者名称
      */
     private void closeConsumer(String name) {
         Admin admin = consumerContainer.get(name);

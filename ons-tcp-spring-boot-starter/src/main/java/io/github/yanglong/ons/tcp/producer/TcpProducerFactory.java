@@ -25,7 +25,9 @@ import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * Description: 在此处通过配置，生成各类消息的生产者实例，并将对应实例放入容器中，提供给消息发送封装客户端使用。
+ * Description: TCP发送客户端工厂实现
+ * <p>
+ * 在此处通过配置，生成各类消息的生产者实例，并将对应实例放入容器中，提供给消息发送封装客户端使用。
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0

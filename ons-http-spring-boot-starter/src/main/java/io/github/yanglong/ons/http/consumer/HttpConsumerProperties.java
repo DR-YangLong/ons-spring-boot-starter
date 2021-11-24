@@ -6,7 +6,7 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 /**
- * Description:
+ * Description: ONS HTTP消费者配置属性
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0
