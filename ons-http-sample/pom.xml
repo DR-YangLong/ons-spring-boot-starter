@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.yanglong</groupId>
+    <groupId>io.github.dr-yanglong</groupId>
     <artifactId>ons-http-sample</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring.boot.version>2.4.4</spring.boot.version>
+        <spring.boot.version>2.4.6</spring.boot.version>
     </properties>
 
     <dependencyManagement>
@@ -33,7 +33,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>io.github.yanglong</groupId>
+            <groupId>io.github.dr-yanglong</groupId>
             <artifactId>ons-http-spring-boot-starter</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>

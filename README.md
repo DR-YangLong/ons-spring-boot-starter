@@ -4,6 +4,8 @@
 * 支持多类型消息生产者&消费者配置
 * 支持HTTP模式和TCP模式
 
+！！！建议生产环境使用TCP模式。
+
 ## 说明
 
 阿里云ONS客户端分为TCP接入点模式和HTTP接入点模式，不同接入点模式使用的客户端不同。 TCP模式只有在公网实例可以在外网使用，否则只能在阿里云内网使用。 HTTP模式则在公网内网都可以使用。
@@ -411,3 +413,12 @@ ONS_SK=secret_key 账号AccessKey管理处生成
 ```
 
 配置完成后即可部署运行。 项目使用knife4j作为API文档输出，启动成功后访问127.0.0.1:8080/doc.html即可访问消息发送页面。
+
+## 部署maven central
+
+教程: https://blog.csdn.net/qq_41973594/article/details/119791466
+
+部署：https://central.sonatype.org/publish/publish-guide/#deployment
+
+gpg插件使用：https://maven.apache.org/plugins/maven-gpg-plugin/usage.html
+
