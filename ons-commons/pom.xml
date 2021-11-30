@@ -9,6 +9,10 @@
 
     <name>ons-commons</name>
     <url>https://dr-yanglong.github.io</url>
+    <description>
+        通用基础组件。
+        the base common component for aliyun ons tools.
+    </description>
 
     <scm>
         <url>https://github.com/DR-YangLong/ons-spring-boot-starter</url>
@@ -41,7 +45,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring.boot.version>2.4.6</spring.boot.version>
+        <spring.boot.version>2.4.13</spring.boot.version>
     </properties>
 
 

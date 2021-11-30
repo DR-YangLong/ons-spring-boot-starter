@@ -9,6 +9,10 @@
 
     <name>ons-http-spring-boot-starter</name>
     <url>https://dr-yanglong.github.io</url>
+    <description>
+        阿里云ONS HTTP客户端封装， spring boot starter组件。
+        a component for aliyun ons with HTTP client.
+    </description>
 
     <scm>
         <url>https://github.com/DR-YangLong/ons-spring-boot-starter</url>
@@ -43,7 +47,7 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <ons.http.version>1.0.3</ons.http.version>
         <ons.commons.version>1.0.0.RELEASE</ons.commons.version>
-        <spring.boot.version>2.4.6</spring.boot.version>
+        <spring.boot.version>2.4.13</spring.boot.version>
     </properties>
 
     <dependencyManagement>

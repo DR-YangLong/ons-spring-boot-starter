@@ -48,7 +48,7 @@ TCP模式下，SDK接入较为简单，可以直接使用SDK的能力。
 ```xml
 
 <dependency>
-    <groupId>io.github.yanglong</groupId>
+    <groupId>io.github.dr-yanglong</groupId>
     <artifactId>ons-tcp-spring-boot-starter</artifactId>
     <!-- 版本根据需要选择 -->
     <version>${version}</version>
@@ -243,7 +243,7 @@ HTTP模式相对于TCP模式，消费时只有一种模式，就是主动拉取�
 ```xml
 
 <dependency>
-    <groupId>io.github.yanglong</groupId>
+    <groupId>io.github.dr-yanglong</groupId>
     <artifactId>ons-http-spring-boot-starter</artifactId>
     <!-- 版本根据需要选择 -->
     <version>${version}</version>
