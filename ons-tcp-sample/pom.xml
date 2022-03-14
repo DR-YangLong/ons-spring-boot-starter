@@ -35,7 +35,7 @@
         <dependency>
             <groupId>io.github.dr-yanglong</groupId>
             <artifactId>ons-tcp-spring-boot-starter</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
