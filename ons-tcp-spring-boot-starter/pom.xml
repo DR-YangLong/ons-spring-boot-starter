@@ -5,7 +5,7 @@
 
     <groupId>io.github.dr-yanglong</groupId>
     <artifactId>ons-tcp-spring-boot-starter</artifactId>
-    <version>1.0.0.RELEASE</version>
+    <version>1.0.1.SNAPSHOT</version>
 
     <name>ons-tcp-spring-boot-starter</name>
     <url>https://dr-yanglong.github.io</url>
@@ -46,7 +46,7 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <ons.commons.version>1.0.0.RELEASE</ons.commons.version>
-        <ons.tcp.version>1.8.7.4.Final</ons.tcp.version>
+        <ons.tcp.version>2.0.1.Final</ons.tcp.version>
         <spring.boot.version>2.4.13</spring.boot.version>
     </properties>
 

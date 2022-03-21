@@ -45,7 +45,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <ons.http.version>1.0.3</ons.http.version>
+        <ons.http.version>1.0.3.2</ons.http.version>
         <ons.commons.version>1.0.0.RELEASE</ons.commons.version>
         <spring.boot.version>2.4.13</spring.boot.version>
     </properties>
