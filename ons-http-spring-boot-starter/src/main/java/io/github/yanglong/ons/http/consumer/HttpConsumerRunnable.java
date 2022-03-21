@@ -39,7 +39,7 @@ public class HttpConsumerRunnable implements Runnable {
     /**
      * 用于控住消费是否停止
      */
-    private boolean shutdown = false;
+    private volatile boolean shutdown = false;
     /**
      * 连续消费失败计数器
      */
@@ -76,6 +76,10 @@ public class HttpConsumerRunnable implements Runnable {
                 }
             } catch (Throwable e) {
                 log.error("HTTP consumer: handler [{}] pull ONS message error!", name, e);
+                if (shutdown) {
+                    log.debug("HTTP MQConsumer shutdown!");
+                    break;
+                }
                 try {
                     retry++;
                     //15秒后重试

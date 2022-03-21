@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.dr-yanglong</groupId>
     <artifactId>ons-http-spring-boot-starter</artifactId>
-    <version>1.0.0.RELEASE</version>
+    <version>1.0.1.SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>ons-http-spring-boot-starter</name>
