@@ -89,7 +89,7 @@ public class HttpConsumerRunnable implements Runnable {
                 }
             }
             if (messages == null || messages.isEmpty()) {
-                log.info("thread {}: handler [{}] no new message, continue!", Thread.currentThread().getName(), name);
+                log.debug("thread {}: handler [{}] no new message, continue!", Thread.currentThread().getName(), name);
                 continue;
             }
             for (Message message : messages) {

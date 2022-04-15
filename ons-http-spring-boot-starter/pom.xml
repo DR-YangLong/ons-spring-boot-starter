@@ -48,6 +48,7 @@
         <ons.http.version>1.0.3.2</ons.http.version>
         <ons.commons.version>1.0.0.RELEASE</ons.commons.version>
         <spring.boot.version>2.4.13</spring.boot.version>
+        <log4j2.version>2.17.2</log4j2.version>
     </properties>
 
     <dependencyManagement>
@@ -67,6 +68,26 @@
             <groupId>com.aliyun.mq</groupId>
             <artifactId>mq-http-sdk</artifactId>
             <version>${ons.http.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.logging.log4j</groupId>
+                    <artifactId>log4j-jcl</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-jcl</artifactId>
+            <version>${log4j2.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.dr-yanglong</groupId>
