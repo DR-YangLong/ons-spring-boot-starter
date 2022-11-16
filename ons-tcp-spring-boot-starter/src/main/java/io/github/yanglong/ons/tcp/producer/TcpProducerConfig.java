@@ -11,7 +11,7 @@ import java.util.Map;
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0
- * @date 2021/4/16 21:45 下午
+ * @since 2021/4/16 21:45 下午
  */
 @Data
 @ConfigurationProperties(prefix = "ali-ons.tcp.producer")

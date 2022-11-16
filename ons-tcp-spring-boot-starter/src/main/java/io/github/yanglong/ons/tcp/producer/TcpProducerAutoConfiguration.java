@@ -18,7 +18,7 @@ import org.springframework.context.annotation.Configuration;
  *
  * @author YangLong [410357434@163.com]
  * @version V1.0
- * @date 2021/4/16 21:06 下午
+ * @since 2021/4/16 21:06 下午
  */
 @Slf4j
 @Data
