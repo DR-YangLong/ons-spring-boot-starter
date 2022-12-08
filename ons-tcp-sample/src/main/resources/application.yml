@@ -81,7 +81,8 @@ ali-ons:
           subscriptions:
             #分区顺序消息
             - topic: order_sharding_dev
-              tags: s
+              #标签过滤
+              #tags: s
               #tcp模式下消息处理类
               listener: io.github.yanglong.ons.tcp.sample.TcpOrderListener
             #全局顺序消息
