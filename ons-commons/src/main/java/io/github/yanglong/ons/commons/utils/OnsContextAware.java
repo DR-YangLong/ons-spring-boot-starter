@@ -11,6 +11,7 @@ import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.AbstractRefreshableApplicationContext;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
@@ -51,7 +52,7 @@ public class OnsContextAware implements ApplicationContextAware {
      */
     public static void removeBean(String beanName) {
         try {
-            BeanDefinitionRegistry beanDefReg = (DefaultListableBeanFactory) ((AbstractRefreshableApplicationContext) getApplicationContext()).getBeanFactory();
+            BeanDefinitionRegistry beanDefReg = (DefaultListableBeanFactory) ((AbstractApplicationContext) getApplicationContext()).getBeanFactory();
             beanDefReg.getBeanDefinition(beanName);
             beanDefReg.removeBeanDefinition(beanName);
         } catch (NoSuchBeanDefinitionException e) {

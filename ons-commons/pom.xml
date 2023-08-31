@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>io.github.dr-yanglong</groupId>
     <artifactId>ons-commons</artifactId>
-    <version>1.0.0.RELEASE</version>
+    <version>1.1.0.RELEASE</version>
     <packaging>jar</packaging>
 
     <name>ons-commons</name>
@@ -45,7 +45,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring.boot.version>2.4.13</spring.boot.version>
+        <spring.boot.version>2.6.14</spring.boot.version>
     </properties>
 
 

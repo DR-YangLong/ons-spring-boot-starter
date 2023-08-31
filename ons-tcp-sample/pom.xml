@@ -6,7 +6,7 @@
 
     <groupId>io.github.dr-yanglong</groupId>
     <artifactId>ons-tcp-sample</artifactId>
-    <version>1.0.1.RELEASE</version>
+    <version>1.1.0.RELEASE</version>
 
     <name>ons-tcp-sample</name>
 
@@ -16,7 +16,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <spring.boot.version>2.4.13</spring.boot.version>
+        <spring.boot.version>2.6.14</spring.boot.version>
     </properties>
 
     <dependencyManagement>
@@ -35,7 +35,7 @@
         <dependency>
             <groupId>io.github.dr-yanglong</groupId>
             <artifactId>ons-tcp-spring-boot-starter</artifactId>
-            <version>1.0.1.RELEASE</version>
+            <version>1.1.0.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

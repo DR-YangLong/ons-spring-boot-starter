@@ -3,6 +3,9 @@ server:
 spring:
   application:
     name: ons-tcp-test
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
 nameServer: ${ONS_NAME_SERVER}
 ali-ons:
   enable: true
